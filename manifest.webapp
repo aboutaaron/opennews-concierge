@@ -1,0 +1,30 @@
+{
+  "version": "0.1",
+  "name": "OpenNews Concierge",
+  "description": "Search for news about a topic with your voice",
+  "launch_path": "/opennews-concierge/dist/index.html",
+  "icons": {
+    "16": "/opennews-concierge/dist/images/icons/icon-16.png",
+    "48": "/opennews-concierge/dist/images/icon-48.png",
+    "128": "/opennews-concierge/dist/images/icon-128.png"
+  },
+  "developer": {
+    "name": "Aaron Williams, Francis Tseng",
+    "url": "https://github.com/aboutaaron/opennews-concierge"
+  },
+  "locales": {
+    "es": {
+      "description": "Búsqueda de noticias sobre un tema con su voz.",
+      "developer": {
+        "url": "https://github.com/aboutaaron/opennews-conciergem"
+      }
+    },
+    "it": {
+      "description": "Ricerca di notizie su un argomento con la tua voce.",
+      "developer": {
+        "url": "https://github.com/aboutaaron/opennews-conciergecom"
+      }
+    }
+  },
+  "default_locale": "en"
+}
