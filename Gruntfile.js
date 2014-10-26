@@ -336,16 +336,16 @@ module.exports = function (grunt) {
           dest: '<%= config.dist %>/manifest.webapp'
         }, {
           src: 'bower_components/microphone-0.7.0.tar/fonts/microphone.svg',
-          dest: '<%= config.dist %>/fonts/microphone.svg'
+          dest: '<%= config.dist %>/styles/fonts/microphone.svg'
         }, {
           src: 'bower_components/microphone-0.7.0.tar/fonts/microphone.eot',
-          dest: '<%= config.dist %>/fonts/microphone.eot'
+          dest: '<%= config.dist %>/styles/fonts/microphone.eot'
         }, {
           src: 'bower_components/microphone-0.7.0.tar/fonts/microphone.ttf',
-          dest: '<%= config.dist %>/fonts/microphone.ttf'
+          dest: '<%= config.dist %>/styles/fonts/microphone.ttf'
         }, {
           src: 'bower_components/microphone-0.7.0.tar/fonts/microphone.woff',
-          dest: '<%= config.dist %>/fonts/microphone.woff'
+          dest: '<%= config.dist %>/styles/fonts/microphone.woff'
         }]
       },
       styles: {
