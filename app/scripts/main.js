@@ -83,6 +83,7 @@ Concierge = {
                 }
             }
 
+            Concierge.fetch(query);
             document.getElementById('result').innerHTML = r;
 
 
