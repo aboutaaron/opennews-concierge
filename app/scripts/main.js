@@ -1,4 +1,4 @@
-/* global Wit: false, toString: false, jQuery: false */
+/* global Wit: false, toString: false, jQuery: false, alert: false */
 
 'use strict';
 
@@ -18,6 +18,24 @@ Concierge = {
         self.setup();
         self.mic.connect('CSDL5LYIMJ77EM66K6TDF5HQ5AWM3ZYL');
     },
+    fetch: function (aQuery) {
+        $.ajax({
+            crossDomain: true,
+            url: 'http://newsautomata.starbase.in/search',
+            type: 'POST',
+            data: {query: aQuery},
+        })
+        .done(function(response) {
+            console.log('success');
+        })
+        .fail(function() {
+            console.log('error');
+        })
+        .always(function() {
+            console.log('complete');
+        });
+
+    },
     setup: function () {
         var self = this;
 
@@ -36,6 +54,16 @@ Concierge = {
 
         self.mic.onresult = function (intent, entities) {
             var r = kv('intent', intent);
+            var query;
+
+            try {
+                query = entities.search_query.value;
+
+            } catch (e) {
+                alert('try again');
+                window.location.reload();
+            }
+
 
             for (var k in entities) {
                 var e = entities[k];
@@ -49,7 +77,11 @@ Concierge = {
                 }
             }
 
+            Concierge.fetch(query);
+
             document.getElementById('result').innerHTML = r;
+
+
         };
 
         self.mic.onerror = function (err) {

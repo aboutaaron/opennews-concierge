@@ -8,29 +8,21 @@ body {
   color: #333;
 }
 
-.mic {
-  display:block;
-  width:180px;
-  height:180px;
-  line-height:50px;
-  border: 2px solid #f5f5f5;
-  border-radius: 50%;
-  color:#f5f5f5;
-  text-align:center;
-  text-decoration:none;
-  background: #464646;
-  box-shadow: 0 0 3px gray;
-  font-size:20px;
-  font-weight:bold;
+#microphone {
+  margin: 0 auto !important;
 
   &:hover {
-    color: darken(#f5f5f5, 10%);
+    opacity: 0.8;
     cursor: pointer;
   }
+}
 
-  .fa {
-    font-size: 5em;
-    padding: 5px;
+.download {
+  margin: 50px auto 0 auto;
+  width: 300px;
+
+  a {
+    color: green;
   }
 }
 
