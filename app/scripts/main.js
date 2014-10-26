@@ -16,7 +16,7 @@ Concierge = {
     init: function () {
         var self = this;
         self.setup();
-        self.mic.connect('CLIENT_TOKEN');
+        self.mic.connect('CSDL5LYIMJ77EM66K6TDF5HQ5AWM3ZYL');
     },
     setup: function () {
         var self = this;
