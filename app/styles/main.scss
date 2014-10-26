@@ -6,13 +6,42 @@ body {
   font-size: 16px;
 }
 
-.content {
-  margin-top: 50px;
+.headline {
+  color: #FC6E1F;
+  text-transform: capitalize;
+  text-decoration: none;
+
+  &:hover {
+    color: darken(#FC6E1F, 10%);
+  }
 }
 
-.logo {
-  width: 30px;
-  opacity: 0.8;
+a {
+  color: #AD3121;
+  &:hover {
+    color: darken(#AD3121, 10%);
+  }
+}
+
+article {
+  border-bottom: 5px solid #f1f1f1;
+  padding: 15px;
+}
+
+footer {
+  position: fixed;
+  background: white;
+  bottom: 0;
+  border-top: 1px solid #cecece;
+  width: 95%;
+}
+
+p {
+  line-height: 24px;
+  font-family: 1.5em;
+  margin: 10px 0 16px;
+  color: #515151;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 .hero-unit {

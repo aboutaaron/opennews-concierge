@@ -330,7 +330,22 @@ module.exports = function (grunt) {
           dest: '<%= config.dist %>/.htaccess'
         }, {
           src: '<%= config.app/app-icons/*.png %>',
-          dest: '<%= config.dest/app-icons/*.png %>',
+          dest: '<%= config.dist/app-icons/*.png %>',
+        }, {
+          src: 'manifest.webapp',
+          dest: '<%= config.dist %>/manifest.webapp'
+        }, {
+          src: 'bower_components/microphone-0.7.0.tar/fonts/microphone.svg',
+          dest: '<%= config.dist %>/fonts/microphone.svg'
+        }, {
+          src: 'bower_components/microphone-0.7.0.tar/fonts/microphone.eot',
+          dest: '<%= config.dist %>/fonts/microphone.eot'
+        }, {
+          src: 'bower_components/microphone-0.7.0.tar/fonts/microphone.ttf',
+          dest: '<%= config.dist %>/fonts/microphone.ttf'
+        }, {
+          src: 'bower_components/microphone-0.7.0.tar/fonts/microphone.woff',
+          dest: '<%= config.dist %>/fonts/microphone.woff'
         }]
       },
       styles: {

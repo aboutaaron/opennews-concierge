@@ -38,6 +38,8 @@
         <pre id="result"></pre>
         <div id="info"></div>
         <div id="error"></div>
+        <hr>
+        <small>Audio not working? <button onclick="Concierge.fetch('ISIS')">Search for ISIS</button></small>
       </div>
 
       <section class="stories">
@@ -61,35 +63,18 @@
 
     <script type="text/x-handlebars" id="tmpl">
       {{#each results}}
-        <div class="list card">
-          <div class="item item-avatar">
-            <img src="http://placekitten.com/g/50/50">
+        <article>
+          <a class="headline" href="{{url}}" title="{{title}}">
             <h2>{{title}}</h2>
-            Published <time>{{published}}</time>
-          </div>
+          </a>
+          Published <time>{{published}}</time>
 
-          <div class="item item-body">
+          <div class="content">
             {{#each summary}}
               <p>{{this}}</p>
             {{/each}}
           </div>
-
-          <div class="item tabs tabs-secondary tabs-icon-left">
-            <a class="tab-item" href="#">
-              <i class="icon ion-thumbsup"></i>
-              Like
-            </a>
-            <a class="tab-item" href="#">
-              <i class="icon ion-chatbox"></i>
-              Comment
-            </a>
-            <a class="tab-item" href="#">
-              <i class="icon ion-share"></i>
-              Share
-            </a>
-          </div>
-
-        </div>
+        </article>
       {{/each}}
     </script>
 

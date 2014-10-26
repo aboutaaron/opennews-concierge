@@ -1,38 +1,21 @@
-<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>opennews concierge</title> <meta name=description content="Search for news about a topic with your voice."> <meta name=viewport content="width=device-width"> <link rel="shortcut icon" href=/6df2b309.favicon.ico> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel=stylesheet href=styles/6c76bf05.vendor.css> <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel=stylesheet type=text/css> <link href=//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css rel=stylesheet> <link rel=stylesheet href=styles/d506375b.main.css>  <body> <!--[if lt IE 10]>
+<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>opennews concierge</title> <meta name=description content="Search for news about a topic with your voice."> <meta name=viewport content="width=device-width"> <link rel="shortcut icon" href=/6df2b309.favicon.ico> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel=stylesheet href=styles/6c76bf05.vendor.css> <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel=stylesheet type=text/css> <link href=//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css rel=stylesheet> <link rel=stylesheet href=styles/62f0524f.main.css>  <body> <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--> <header class="bar bar-header bar-light"> <h1 class=title>OpenNews Concierge</h1> </header> <section class=content> <button class="button button-balanced"> <i class="fa fa-download"></i> for Firefox OS </button> <div class=hero-unit> <div id=microphone></div> <pre id=result></pre> <div id=info></div> <div id=error></div> </div> <section class=stories> <div id=placeholder></div> </section> </section> <footer class="bar bar-footer bar-assertive"> <div class=title>Powered by <a href=#>News Automata.</a> Designed and Developed by <a href=#>Francis Tseng</a> and <a href=#>Aaron Williams</a> for <a href=#>#mozfest</a>.</div> </footer> <script src=scripts/c56fc019.vendor.js></script> <script type=text/x-handlebars id=tmpl>{{#each results}}
-        <div class="list card">
-          <div class="item item-avatar">
-            <img src="http://placekitten.com/g/50/50">
+    <![endif]--> <header class="bar bar-header bar-light"> <h1 class=title>OpenNews Concierge</h1> </header> <section class=content> <button class="button button-balanced"> <i class="fa fa-download"></i> for Firefox OS </button> <div class=hero-unit> <div id=microphone></div> <pre id=result></pre> <div id=info></div> <div id=error></div> <hr> <small>Audio not working? <button onclick="Concierge.fetch('ISIS')">Search for ISIS</button></small> </div> <section class=stories> <div id=placeholder></div> </section> </section> <footer class="bar bar-footer bar-assertive"> <div class=title>Powered by <a href=#>News Automata.</a> Designed and Developed by <a href=#>Francis Tseng</a> and <a href=#>Aaron Williams</a> for <a href=#>#mozfest</a>.</div> </footer> <script src=scripts/c56fc019.vendor.js></script> <script type=text/x-handlebars id=tmpl>{{#each results}}
+        <article>
+          <a class="headline" href="{{url}}" title="{{title}}">
             <h2>{{title}}</h2>
-            Published <time>{{published}}</time>
-          </div>
+          </a>
+          Published <time>{{published}}</time>
 
-          <div class="item item-body">
+          <div class="content">
             {{#each summary}}
               <p>{{this}}</p>
             {{/each}}
           </div>
-
-          <div class="item tabs tabs-secondary tabs-icon-left">
-            <a class="tab-item" href="#">
-              <i class="icon ion-thumbsup"></i>
-              Like
-            </a>
-            <a class="tab-item" href="#">
-              <i class="icon ion-chatbox"></i>
-              Comment
-            </a>
-            <a class="tab-item" href="#">
-              <i class="icon ion-share"></i>
-              Share
-            </a>
-          </div>
-
-        </div>
+        </article>
       {{/each}}</script> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --> <script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
       e.src='//www.google-analytics.com/analytics.js';
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');</script> <script src=scripts/d07c30f7.main.js></script>  
+      ga('create','UA-XXXXX-X');ga('send','pageview');</script> <script src=scripts/97f1d588.main.js></script>  
