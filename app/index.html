@@ -9,6 +9,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -22,7 +23,35 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div id="download">
+    <header class="bar bar-header bar-light">
+      <h1 class="title">OpenNews Concierge</h1>
+    </header>
+
+    <section class="content">
+
+      <button class="button button-balanced">
+        <i class="fa fa-download"></i> for Firefox OS
+      </button>
+
+      <div class="hero-unit">
+        <div id="microphone"></div>
+        <pre id="result"></pre>
+        <div id="info"></div>
+        <div id="error"></div>
+      </div>
+
+      <section class="stories">
+        <div id="placeholder"></div>
+      </section>
+    </section>
+
+
+    <footer class="bar bar-footer bar-assertive">
+      <div class="title">Powered by <a href="#">News Automata.</a> Designed and Developed by <a href="#">Francis Tseng</a> and <a href="#">Aaron Williams</a> for <a href="#">#mozfest</a>.</div>
+    </footer>
+
+
+<!--     <div id="download">
       <button class="btn btn-lg">
         <i class="fa fa-download" id="install-btn"></i> Download for Firefox OS
       </button>
@@ -38,7 +67,7 @@
       <section class="results">
         <div id="placeholder"></div>
       </section>
-    </div>
+    </div> -->
 
 
 
@@ -47,23 +76,48 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/handlebars/handlebars.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ionic/release/js/ionic.js"></script>
+    <script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+    <script src="bower_components/spin.js/spin.js"></script>
     <!-- endbower -->
     <script src="bower_components/microphone-0.7.0.tar/microphone.min.js"></script>
     <!-- endbuild -->
 
     <script type="text/x-handlebars" id="tmpl">
       {{#each results}}
-        <article class="story">
-          <a href="{{url}}" title="{{title}}">
-            <h2 class="headline">{{title}}</h2>
-          </a>
-          <span>Published on <time>{{published}}</time></span>
-          <div>
+        <div class="list card">
+          <div class="item item-avatar">
+            <img src="http://placekitten.com/g/50/50">
+            <h2>{{title}}</h2>
+            Published <time>{{published}}</time>
+          </div>
+
+          <div class="item item-body">
             {{#each summary}}
               <p>{{this}}</p>
             {{/each}}
           </div>
-        </article>
+
+          <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="#">
+              <i class="icon ion-thumbsup"></i>
+              Like
+            </a>
+            <a class="tab-item" href="#">
+              <i class="icon ion-chatbox"></i>
+              Comment
+            </a>
+            <a class="tab-item" href="#">
+              <i class="icon ion-share"></i>
+              Share
+            </a>
+          </div>
+
+        </div>
       {{/each}}
     </script>
 
