@@ -1,0 +1,76 @@
+// bower:scss
+@import "lemonade/scss/lemonade.scss";
+// endbower
+
+body {
+  background: #fafafa;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.mic {
+  display:block;
+  width:180px;
+  height:180px;
+  line-height:50px;
+  border: 2px solid #f5f5f5;
+  border-radius: 50%;
+  color:#f5f5f5;
+  text-align:center;
+  text-decoration:none;
+  background: #464646;
+  box-shadow: 0 0 3px gray;
+  font-size:20px;
+  font-weight:bold;
+
+  &:hover {
+    color: darken(#f5f5f5, 10%);
+    cursor: pointer;
+  }
+
+  .fa {
+    font-size: 5em;
+    padding: 5px;
+  }
+}
+
+.frame {
+  ul {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+
+    li {
+      a {
+        color: #bada55;
+
+        &:hover {
+          color: darken(#bada55, 10%);
+        }
+      }
+    }
+  }
+}
+
+.hero-unit {
+  margin: 50px auto 0 auto;
+  width: 300px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 60px;
+  h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
