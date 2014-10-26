@@ -5,6 +5,11 @@
   margin-top: 50px;
 }
 
+.logo {
+  width: 30px;
+  opacity: 0.8;
+}
+
 .hero-unit {
   width: 50%;
   margin: 0 auto;
@@ -12,6 +17,10 @@
 
   .wit-microphone {
     margin: 0 auto;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 

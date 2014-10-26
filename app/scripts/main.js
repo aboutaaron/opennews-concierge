@@ -14,8 +14,11 @@ var Concierge = Concierge || {},
 Concierge = {
     mic: new Wit.Microphone(document.getElementById('microphone')),
     init: function () {
-        var self = this;
-        //self.download();
+        var self = this,
+            isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
+
+        if ( isFirefox ) self.download();
+
         self.setup();
         self.mic.connect('CSDL5LYIMJ77EM66K6TDF5HQ5AWM3ZYL');
     },
