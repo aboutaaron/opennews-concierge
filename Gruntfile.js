@@ -329,9 +329,6 @@ module.exports = function (grunt) {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
           dest: '<%= config.dist %>/.htaccess'
         }, {
-          src: '<%= config.app %>',
-          dest: '<%= config.dist %>'
-        }, {
           src: '<%= config.app/app-icons/*.png %>',
           dest: '<%= config.dest/app-icons/*.png %>',
         }]
