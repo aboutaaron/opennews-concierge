@@ -7,6 +7,16 @@ body {
   margin-bottom: 20px;
 }
 
+.title {
+  text-align: center;
+}
+
+.content {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+}
+
 .headline {
   color: #FC6E1F;
   text-transform: capitalize;
@@ -48,7 +58,7 @@ p {
 
 .hero-unit {
   width: 50%;
-  //margin: 0 auto;
+  margin: 0 auto;
   text-align: center;
 
   .wit-microphone {
