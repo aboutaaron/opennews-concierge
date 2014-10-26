@@ -22,10 +22,10 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="download">
-      <a href="#">
-        <i class="fa fa-download"></i>
-      </a>
+    <div id="download">
+      <button class="btn btn-lg">
+        <i class="fa fa-download" id="install-btn"></i> Download for Firefox OS
+      </button>
     </div>
     <div class="hero-unit">
       <div id="microphone"></div>
@@ -35,11 +35,9 @@
     </div>
 
     <div class="frame">
-      <ul>
-        <li>
-          <a href="#">5 pesticides used in US are banned in other countries</a>
-        </li>
-      </ul>
+      <section class="results">
+        <div id="placeholder"></div>
+      </section>
     </div>
 
 
@@ -48,9 +46,26 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/handlebars/handlebars.js"></script>
     <!-- endbower -->
     <script src="bower_components/microphone-0.7.0.tar/microphone.min.js"></script>
     <!-- endbuild -->
+
+    <script type="text/x-handlebars" id="tmpl">
+      {{#each results}}
+        <article class="story">
+          <a href="{{url}}" title="{{title}}">
+            <h2 class="headline">{{title}}</h2>
+          </a>
+          <span>Published on <time>{{published}}</time></span>
+          <div>
+            {{#each summary}}
+              <p>{{this}}</p>
+            {{/each}}
+          </div>
+        </article>
+      {{/each}}
+    </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
