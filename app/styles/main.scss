@@ -1,6 +1,11 @@
 // bower:scss
 // endbower
 
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
+}
+
 .content {
   margin-top: 50px;
 }
@@ -12,7 +17,7 @@
 
 .hero-unit {
   width: 50%;
-  margin: 0 auto;
+  //margin: 0 auto;
   text-align: center;
 
   .wit-microphone {

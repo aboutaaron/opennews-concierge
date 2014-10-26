@@ -5,7 +5,6 @@
     "jquery": "~1.11.1",
     "microphone-0.7.0.tar": "https://github.com/wit-ai/microphone/releases/download/0.7.0/microphone-0.7.0.tar.gz",
     "handlebars": "~2.0.0",
-    "ionic": "~0.9.27",
     "spin.js": "~2.0.1"
   }
 }
