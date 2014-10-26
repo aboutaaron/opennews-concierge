@@ -31,6 +31,7 @@ Concierge = {
             data: {query: aQuery},
         })
         .done(function(response) {
+            $('#placeholder').html('');
             self.configure('#tmpl', '#placeholder', response);
             console.log('success');
         })

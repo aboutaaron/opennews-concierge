@@ -13,6 +13,7 @@ body {
 
 .content {
   width: 75%;
+  @media screen and (max-width: 900px) { width: 100%; }
   display: block;
   margin: 0 auto;
 }
@@ -37,6 +38,9 @@ a {
 article {
   border-bottom: 5px solid #f1f1f1;
   padding: 15px;
+  @media screen and (max-width: 500px) {
+    padding: 0;
+  }
 }
 
 footer {
