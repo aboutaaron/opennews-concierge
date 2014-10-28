@@ -28,6 +28,16 @@ body {
   }
 }
 
+.notes {
+  display: inline-block;
+  padding: 2px;
+  font-weight: bold;
+  color: white;
+  margin-top: 5px;
+  text-transform: lowercase;
+  background: #c21525;
+}
+
 a {
   color: #AD3121;
   &:hover {
@@ -46,10 +56,11 @@ article {
 footer {
   position: fixed;
   font-size: 14px;
+  @media screen and (max-width: 500px) { font-size: 8px; }
   background: white;
   bottom: 0;
   border-top: 1px solid #cecece;
-  width: 95%;
+  width: 100%;
 }
 
 p {
