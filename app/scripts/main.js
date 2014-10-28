@@ -17,7 +17,7 @@ Concierge = {
         var self = this,
             isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
 
-        if ( isFirefox ) self.download();
+        //if ( isFirefox ) self.download();
 
         self.setup();
         self.mic.connect('CSDL5LYIMJ77EM66K6TDF5HQ5AWM3ZYL');
